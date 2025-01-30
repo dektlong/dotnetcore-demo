@@ -1,12 +1,14 @@
+#prereq: dotnet publish
 ---
 applications:
-- name: cpdemo-blue
+- name: dotnetcore-demo
   memory: 384M
   instances: 1
   random-route: true
-  path: src\CloudPlatformDemo\bin\Debug\net8.0\linux-x64\publish\
+  path: src/CloudPlatformDemo/bin/Release/net8.0/publish
   buildpacks:
     - dotnet_core_buildpack
-  services: []
+#  services:
+#    - sample-db
   env:
     SKIP_SSL_VALIDATION: "true"
