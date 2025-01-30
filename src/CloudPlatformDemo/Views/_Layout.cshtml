@@ -53,8 +53,8 @@
     }
     else if(Platform.IsCloudFoundry)
     {
-        icon = "~/img/icon-cloud-foundry.png";
-        platformName = "TAS";
+        icon = "~/img/tanzu.png";
+        platformName = "TANZU";
     }
     else if (Platform2.IsTanzuApplicationPlatform)
     {
@@ -81,7 +81,7 @@
             <div class="col-sm">
                 <img class="img-fluid" src="@Url.Content(icon)"/>
             </div>
-            <div class="col-sm sidebar-brand-text mx-3 sidebar-brand d-flex align-items-center justify-content-center">@platformName Demo</div>
+            <div class="col-sm sidebar-brand-text mx-3 sidebar-brand d-flex align-items-center justify-content-center">@platformName Dotnet Demo</div>
         </div>
     </div>
 </a>
