@@ -9,6 +9,6 @@ applications:
   buildpacks:
     - dotnet_core_buildpack
   #services:
-  #  - boneyard-db
+  #  - my-db
   env:
     SKIP_SSL_VALIDATION: "true"
