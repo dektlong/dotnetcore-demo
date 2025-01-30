@@ -1,14 +1,14 @@
-#prereq: dotnet publish -r linux-x64 --no-self-contained 
+#prereq: ./build.sh Publish
 ---
 applications:
 - name: dotnetcore-demo
   memory: 1G
   instances: 1
   random-route: true
-  path: src/CloudPlatformDemo/bin/Release/net8.0/publish
+  path: src/CloudPlatformDemo/bin/Debug/net8.0/linux-x64/publish
   buildpacks:
     - dotnet_core_buildpack
-  services:
-    - boneyard-db
+  #services:
+  #  - boneyard-db
   env:
     SKIP_SSL_VALIDATION: "true"
