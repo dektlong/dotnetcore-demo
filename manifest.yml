@@ -1,5 +1,4 @@
 #prereq: ./build.sh Publish
-#for 'dog happy/sad' modify the img src here src/CloudPlatformDemo/Views/Home/Tas/PublishInstructions.cshtml
 ---
 applications:
 - name: dotnetcore-demo
@@ -9,5 +8,5 @@ applications:
   path: src/CloudPlatformDemo/bin/Debug/net8.0/linux-x64/publish
   buildpacks:
     - dotnet_core_buildpack
-  services:
-    - my-db
+  #services:
+  #  - my-db
