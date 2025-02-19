@@ -1,4 +1,22 @@
-﻿@{
+﻿@using CloudPlatformDemo.Models
+@inject AppEnv AppInfo
+
+@{
     Layout = null;
 }
-<img width="100" height="100" src="~/img/sad-dog.jpg">
+<div class="row">
+   <img width="150" height="150" src="~/img/happy-dog.jpg">
+</div>
+<BR>
+<div class="row">
+    <div class="col-4">
+        <strong>My name is: </strong>
+    </div>
+    <div class="col-8">@AppInfo.InstanceName</div>
+</div>
+<div class="row">
+    <div class="col-4">
+        <strong>I bark like: </strong>
+    </div>
+    <div class="col-8">@AppInfo.ContainerAddress</div>
+</div>
