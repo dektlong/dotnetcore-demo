@@ -61,6 +61,7 @@ map-routes() {
     new_dog_state=$1
     old_dog_state=$2
     
+    cf create-route $APPS_DOMAIN -n $PROD_SUB_DOMAIN 
     cf map-route $BASE_APP_NAME-$new_dog_state $APPS_DOMAIN -n $PROD_SUB_DOMAIN
 
     cf unmap-route $BASE_APP_NAME-$old_dog_state $APPS_DOMAIN -n $PROD_SUB_DOMAIN
